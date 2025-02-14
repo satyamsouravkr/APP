@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        body {
+            background-image: url('login.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .form {
+            background-color: rgb(204, 236, 236);
+            width: 390px;
+            margin: 150px 700px;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .form h3 {
+            text-align: center;
+        }
+        .form input[type="email"],
+        .form input[type="password"] {
+            width: 50%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+        .right{
+            text-align: right;
+        }
+        .right a{
+            text-decoration: none;
+            
+        }
+        .form input[type=submit]{
+            width: 50%;
+            margin: 0 100px;
+            padding: 10px;  
+            cursor: pointer;
+            border: 2px;
+            background-color: lightskyblue;
+        }
+        .form input[type=submit]:hover{
+            background-color: #0096E6
+        }
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .links a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <div class="right" >
+            <a href="professional.html">Register as Professional</a>
+        </div>
+        <h3>A TO Z Household Services</h3>
+        <form>
+            <label>Registered Email ID:</label>
+            <input type="email" name="email" placeholder="Enter Registered Email ID" required/>
+
+            <label>Password:</label>
+            <input type="password" name="password" placeholder="Enter your password" required/>
+
+            <input type="submit" value="Login">
+            <div class="links">
+                <a href="signup.html">Create Account</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
