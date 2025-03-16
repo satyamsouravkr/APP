@@ -4,73 +4,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page</title>
+    <title>Login Page</title>
     <style>
+        /* Body Styling */
         body {
             background-image: url('login.jpeg');
             background-size: cover;
             background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            margin: 0;
+            padding: 20px;
         }
+
+        /* Form Container */
         .form {
             background-color: rgb(204, 236, 236);
-            width: 390px;
-            margin: 150px 700px;
-            padding: 30px;
+            width: 90%;
+            max-width: 390px;
+            padding: 20px;
             border-radius: 10px;
-        }
-        .form h3 {
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        /* Input Fields and Labels */
+        .form div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .form label {
+            width: 45%;
+            text-align: left;
         }
         .form input[type="email"],
         .form input[type="password"] {
             width: 50%;
             padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #fff;
+            border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .right{
-            text-align: right;
+
+        /* Right Aligned Link */
+        .right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
-        .right a{
+        .right a {
             text-decoration: none;
-            
+            color: #0096E6;
         }
-        .form input[type=submit]{
+
+        /* Login Button */
+        .form input[type=submit] {
             width: 50%;
-            margin: 0 100px;
-            padding: 10px;  
+            padding: 10px;
             cursor: pointer;
-            border: 2px;
+            border: none;
             background-color: lightskyblue;
+            color: white;
+            font-size: 16px;
+            display: block;
+            margin: 10px auto;
         }
-        .form input[type=submit]:hover{
-            background-color: #0096E6
+        .form input[type=submit]:hover {
+            background-color: #0096E6;
         }
+
+        /* Links Below Form */
         .links {
             text-align: center;
             margin-top: 20px;
         }
         .links a {
-            margin: 0 10px;
             text-decoration: none;
+            color: #0096E6;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .form div {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .form label, .form input {
+                width: 100%;
+            }
+            .form label {
+                margin-bottom: 5px;
+            }
+            .links a {
+                width: auto;
+                display: block;
+                text-align: center;
+            }
+            .right {
+                position: static;
+                text-align: right;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="form">
-        <div class="right" >
+        <div class="right">
             <a href="professional.html">Register as Professional</a>
         </div>
         <h3>A TO Z Household Services</h3>
         <form>
-            <label>Registered Email ID:</label>
-            <input type="email" name="email" placeholder="Enter Registered Email ID" required/>
-
-            <label>Password:</label>
-            <input type="password" name="password" placeholder="Enter your password" required/>
-
+            <div>
+                <label>Registered Email ID:</label>
+                <input type="email" name="email" placeholder="Enter Registered Email ID" required/>
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Enter your password" required/>
+            </div>
             <input type="submit" value="Login">
             <div class="links">
                 <a href="signup.html">Create Account</a>

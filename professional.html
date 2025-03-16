@@ -3,81 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>professional</title>
+    <title>Professional Signup</title>
     <style>
+        /* Body Styling */
         body {
             background-image: url('professional.jpg');
             background-size: cover;
             background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
         }
 
+        /* Form Container */
         .form {
             background-color: lightcyan;
-            width: 390px;
-            margin: 50px 270px;
-            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            padding: 25px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .form h3 {
             text-align: center;
+            margin-bottom: 20px;
         }
-        .form input[type="email"],[type="password"],[type=number],[type=choice],[type=file],[type=text]{
-            width: 50%;
-            padding: 8px;
-            margin-bottom: 15px;
+
+        /* Flexbox for Label & Input */
+        .form-group {
+            display: flex;
+            align-items: center; /* Align fields with labels */
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            width: 40%;
+            text-align: left;
+            font-size: 18px;
+            margin-right: 5px; /* Little space between label and field */
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 55%;
+            padding: 6px;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .form input[type=submit]{
-            width: 50%;
-            margin: 0 100px;
-            padding: 10px;  
+
+        /* Submit Button */
+        .form input[type=submit] {
+            width: 100%;
+            padding: 10px;
             cursor: pointer;
-            border: 2px;
+            border: none;
             background-color: lightskyblue;
+            color: white;
+            font-size: 16px;
+            margin-top: 10px;
         }
-        .form input[type=submit]:hover{
-            background-color: #0096E6
+
+        .form input[type=submit]:hover {
+            background-color: #0096E6;
         }
+
+        /* Links */
         .links {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 15px;
         }
+
         .links a {
-            margin: 0 10px;
             text-decoration: none;
-        }  
+            color: #0096E6;
+        }
+
+        /* ✅ Responsive for Mobile Screens */
+        @media screen and (max-width: 768px) {
+            .form {
+                width: 90%;
+                padding: 20px;
+            }
+            .form-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .form-group label,
+            .form-group input,
+            .form-group select {
+                width: 100%;
+            }
+            .form-group label {
+                margin-bottom: 3px; /* Space between label and input */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="form">
         <form>
-            <h3> Service Professional Signup</h3>
-            <label>Email ID(Username):</label>
-            <input type="email" name="email" placeholder="Enter Username or email" required />
-            <label>Password:</label>
-            <input type="password" name="password" placeholder="Enter your password" required /><br>
-            <label> Name:</label>
-            <input type="text" placeholder="Enter your name" required /><br>
-            <label>Services Name</label>
-            <select type="choice">
-                <option> Choose</option>            
-                <option> Home Cleaning </option>
-                <option> House Painting </option>
-                <option> Tech Support </option>
-                <option> General Services </option>
-            </select><br>
-            <label>Experience (in yrs)</label>
-            <input type="number" placeholder="Experience"><br>
-            <label> Attach Documents:</label>
-            <input type="file" placeholder="upload file">
-            <label>Address:</label>
-            <input type="text"  placeholder="enter the Address"><br>
-            <label>Pin code:</label>
-            <input type="number" placeholder=" enter Pin code"><br>
+            <h2 align="center">Service Professional Signup</h2>
+
+            <div class="form-group">
+                <label>Email ID:</label>
+                <input type="email" name="email" placeholder="Enter Email" required />
+            </div>
+
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Enter Password" required />
+            </div>
+
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" placeholder="Enter Your Name" required />
+            </div>
+
+            <div class="form-group">
+                <label>Services:</label>
+                <select required>
+                    <option value="">Choose</option>            
+                    <option>Home Cleaning</option>
+                    <option>House Painting</option>
+                    <option>Tech Support</option>
+                    <option>General Services</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Experience:</label>
+                <input type="number" placeholder="Years of Experience" required />
+            </div>
+
+            <div class="form-group">
+                <label>Documents:</label>
+                <input type="file" required />
+            </div>
+
+            <div class="form-group">
+                <label>Address:</label>
+                <input type="text" placeholder="Enter Address" required />
+            </div>
+
+            <div class="form-group">
+                <label>Pin Code:</label>
+                <input type="number" placeholder="Enter Pin Code" required />
+            </div>
+
             <input type="submit" value="Register">
+            
             <div class="links">
-                <a href="signup.html">Login here</a>
+                <a href="index.html">Login here</a>
             </div>
         </form>
     </div>
